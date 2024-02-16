@@ -1,0 +1,9 @@
+div{
+    background-color: #0E8388;
+    height: 100%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #CBE4DE;
+}
