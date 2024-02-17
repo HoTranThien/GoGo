@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SideViewComponent } from './side-view/side-view.component';
 import { MainBodyComponent } from './main-body/main-body.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [				
@@ -18,7 +19,8 @@ import { MainBodyComponent } from './main-body/main-body.component';
    ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     provideClientHydration()
