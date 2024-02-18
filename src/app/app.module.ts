@@ -8,14 +8,18 @@ import { FooterComponent } from './footer/footer.component';
 import { SideViewComponent } from './side-view/side-view.component';
 import { MainBodyComponent } from './main-body/main-body.component';
 import { FormsModule } from '@angular/forms';
+import { ParentComponent } from './parent/parent.component';
+import { ChildrenComponent } from './children/children.component';
 
 @NgModule({
-  declarations: [				
+  declarations: [						
     AppComponent,
       HeaderComponent,
       FooterComponent,
       SideViewComponent,
-      MainBodyComponent
+      MainBodyComponent,
+      ParentComponent,
+      ChildrenComponent
    ],
   imports: [
     BrowserModule,

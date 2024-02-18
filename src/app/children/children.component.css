@@ -1,0 +1,38 @@
+.children{
+    background-color: #F1DEC9;
+    min-height: 400px;
+    display: flex;
+    border-bottom: #C8B6A6 solid 5px;
+    justify-content: center;
+}
+.child-container{
+    width: 1000px;
+    margin-top: 80px;
+}
+.child-container p{
+    width: 80px;
+    padding: 10px;
+    
+    border-radius: 5px;
+    margin: 0px 66px 50px 0px;
+    height: fit-content;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    display: inline-block;
+    justify-content: center;
+    flex-direction: row;
+}
+.child-container p:hover{
+    cursor: pointer;
+}
+.focus{
+    background-color: #1A120B;
+    color: #F1DEC9;
+    border: 2px solid #1A120B
+}
+.unfocus{
+    background-color: #8D7B68;
+    color: #F1DEC9;
+    border: 2px solid #1A120B;
+}

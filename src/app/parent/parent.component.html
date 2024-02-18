@@ -1,0 +1,11 @@
+<div class="parent">
+  <div class="buttons">
+    <button (click)="ChangeColor($event)" [ngStyle]="{'background-color': field=='Colors'? '#D5CEA3': '#1A120B','color': field=='Colors'? '#1A120B': '#D5CEA3'}">Colors</button>
+    <button (click)="ChangeColor($event)" [ngStyle]="{'background-color': field=='Fruits'? '#D5CEA3': '#1A120B','color': field=='Fruits'? '#1A120B': '#D5CEA3'}">Fruits</button>
+    <button (click)="ChangeColor($event)" [ngStyle]="{'background-color': field=='Animals'? '#D5CEA3': '#1A120B','color': field=='Animals'? '#1A120B': '#D5CEA3'}">Animals</button>
+    <button (click)="ChangeColor($event)" [ngStyle]="{'background-color': field=='All'? '#D5CEA3': '#1A120B','color': field=='All'? '#1A120B': '#D5CEA3'}">All</button>
+  </div>
+  <p [ngStyle]="{'display': item !=''? 'block':'none'}">{{item}} is chosen!</p>
+</div>
+
+<app-children (sendmessagetoparent) = 'receivemessage($event)' [filter]="messagetochildren"></app-children>

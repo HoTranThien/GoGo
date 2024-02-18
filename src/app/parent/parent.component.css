@@ -1,0 +1,33 @@
+.parent{
+    background-color: #F1DEC9;
+    min-height: 200px;
+    display: block;
+    border-bottom: #C8B6A6 solid 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parent button{
+    padding: 10px;
+    border-radius: 5px;
+    color: #F1DEC9;
+    background-color: #1A120B;
+    display: block;
+    height: fit-content;
+    margin-left: 50px;
+    width: 200px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.parent p{
+    font-size: 20px;
+    font-weight: bold;
+    color: #1A120B;
+    margin-top: 30px;
+}

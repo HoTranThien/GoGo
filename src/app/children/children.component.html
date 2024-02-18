@@ -1,0 +1,7 @@
+<div class="children">
+  <div class="child-container">
+    <p *ngFor="let item of data" (click)="ShowMessage($event)" class="abc"
+        [ngClass]="{focus:itemchosen == item.name,unfocus:itemchosen != item.name}"
+        [ngStyle]="{'display': (filter == item.type||filter == 'all')? 'inline-block':'none'}">{{item.name}}</p>
+  </div>
+</div>
