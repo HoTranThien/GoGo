@@ -1,0 +1,19 @@
+<div class="second">
+  <h1>Second Component</h1>
+  <div class="tool">
+    <div class="dropdown">
+      <p class="main-bar">{{selectedshape}}</p>
+      <div class="dropdown-items">
+        <p *ngFor="let item of shape" (click) ="selectitem($event,'s')">{{item}}</p>
+      </div>
+    </div>
+    <div class="dropdown">
+      <p class="main-bar">{{selectedcolor}}</p>
+      <div class="dropdown-items">
+        <p *ngFor="let item of color" (click) ="selectitem($event,'c')">{{item}}</p>
+      </div>
+    </div> 
+    <button (click)="drawsketch()">Draw</button> 
+  </div>
+  <div class="draw2"></div>
+</div>

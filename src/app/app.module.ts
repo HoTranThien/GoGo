@@ -10,16 +10,20 @@ import { MainBodyComponent } from './main-body/main-body.component';
 import { FormsModule } from '@angular/forms';
 import { ParentComponent } from './parent/parent.component';
 import { ChildrenComponent } from './children/children.component';
+import { FirstComponent } from './first/first.component';
+import { SecondComponent } from './second/second.component';
 
 @NgModule({
-  declarations: [						
+  declarations: [								
     AppComponent,
       HeaderComponent,
       FooterComponent,
       SideViewComponent,
       MainBodyComponent,
       ParentComponent,
-      ChildrenComponent
+      ChildrenComponent,
+      FirstComponent,
+      SecondComponent
    ],
   imports: [
     BrowserModule,
