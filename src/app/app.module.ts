@@ -14,7 +14,7 @@ import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 
 @NgModule({
-  declarations: [								
+  declarations: [										
     AppComponent,
       HeaderComponent,
       FooterComponent,
@@ -23,7 +23,7 @@ import { SecondComponent } from './second/second.component';
       ParentComponent,
       ChildrenComponent,
       FirstComponent,
-      SecondComponent
+      SecondComponent,
    ],
   imports: [
     BrowserModule,

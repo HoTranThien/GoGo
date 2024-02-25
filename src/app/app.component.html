@@ -51,6 +51,24 @@
 <br>
 <app-first></app-first>
 <app-second></app-second>
-
+<br>
+<br>
+<br>
+<br>
+<div class="viewchild">
+    <h1>VIEW CHILD</h1>
+    <h2>Analyze Code</h2>
+    <input type="text" #inp  (input)="ExportResult($event)">
+    <div class="result" *ngIf="inp.value.length >0">
+        <h1>Result</h1>
+        <h2>Number of character = {{numcharacter}}</h2>
+        <h2>Vowels</h2>
+        <h3>a: {{vcA}}</h3>
+        <h3>e: {{vcE}}</h3>
+        <h3>i: {{vcI}}</h3>
+        <h3>o: {{vcO}}</h3>
+        <h3>u: {{vcU}}</h3>
+    </div>
+</div>
 
 <app-footer></app-footer>

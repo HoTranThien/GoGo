@@ -1,18 +1,20 @@
-import { AfterViewInit, Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnChanges, OnInit, SimpleChanges, ViewChild, ViewContainerRef, input, viewChild } from '@angular/core';
+import { read } from 'fs';
+import { ChildrenComponent } from './children/children.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent{
+export class AppComponent implements OnInit{
 
   title = 'GoGo';
   myname:string = "Tran Thien Ho";
   url = "https://i.pinimg.com/236x/13/5d/70/135d7021a392276721ad8629a9e5a3dd.jpg";
   url2 = "https://i.pinimg.com/236x/5f/60/7f/5f607f309d5073a51141cc7bb84bc926.jpg";
   result:string="";
-  
+
   Check(){
     const btn = document.querySelector("button");
     console.log(btn);
@@ -62,4 +64,34 @@ export class AppComponent{
   // ngOnChanges(changes: SimpleChanges): void {
   //   this.addnumber;
   // }
+  //}
+
+  @ViewChild('inp',{static:true}) myinput? : ElementRef;
+  @ViewChild('viewch',{static:true}) myviewchild? : any;
+  ngOnInit(){
+    this.myinput?.nativeElement.focus(); 
+  }
+  usechild(input:any){
+    console.log(input);
+  }
+  @ViewChild('result') re:any;
+  numcharacter?:number;
+  vcA?:number;
+  vcE?:number;
+  vcI?:number;
+  vcO?:number;
+  vcU?:number;
+  ExportResult(e:any){
+    let inputted:string = e.target.value;
+    this.numcharacter = inputted.length;
+    this.vcA = this.countcharacter(inputted,'a');
+    this.vcE = this.countcharacter(inputted,'e');
+    this.vcI = this.countcharacter(inputted,'i');
+    this.vcO = this.countcharacter(inputted,'o');
+    this.vcU = this.countcharacter(inputted,'u');
+  }
+  countcharacter(string:string,character:string){
+    const reg = new RegExp(character,'gi');
+    return Array.from(string.matchAll(reg)).length;
+  }
 }
