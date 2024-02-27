@@ -1,0 +1,26 @@
+<div class="directives">
+  <div class="dir-btn">
+      <button class="btn" (click)="signal('div2')" [ngStyle]="{'background-color': isdiv2? '#2E4F4F': 'brown'}">Numbers divisible by 2</button>
+      <button class="btn" (click)="signal('div3')" [ngStyle]="{'background-color': isdiv3? '#2E4F4F': 'brown'}">Numbers divisible by 3</button>
+      <button class="btn" (click)="signal('div5')" [ngStyle]="{'background-color': isdiv5? '#2E4F4F': 'brown'}">Numbers divisible by 5</button>
+      <button class="btn" (click)="signal('div10')" [ngStyle]="{'background-color': isdiv10? '#2E4F4F': 'brown'}">Numbers divisible by 10</button>
+      <button class="btn clear" (click)="signal('clear')">CLEAR</button>
+  </div>
+  <div class="right">
+      <div class="dir-table">
+          <p *ngFor="let num of numbers"
+          [ngClass]="{div2: num%2 == 0 && isdiv2,
+                      div3:num%3 == 0 && isdiv3,
+                      div5:num%5 == 0 && isdiv5,
+                      div10:num%10 == 0 && isdiv10}">{{num}}</p>
+      </div>
+      <div [ngSwitch]="state">
+          <h3  *ngSwitchCase='2'>The highlight numbers is divisible by 2</h3>
+          <h3  *ngSwitchCase="3">The highlight numbers is divisible by 3</h3>
+          <h3  *ngSwitchCase="5">The highlight numbers is divisible by 5</h3>
+          <h3  *ngSwitchCase="10">The highlight numbers is divisible by 10</h3>
+          <h3  *ngSwitchCase="0">Please Click the button!!!</h3>
+      </div>
+  </div>
+
+</div>

@@ -12,9 +12,12 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildrenComponent } from './children/children.component';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
+import { DirectiveComponent } from './directive/directive.component';
+import { ViewchildComponent } from './viewchild/viewchild.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  declarations: [										
+  declarations: [													
     AppComponent,
       HeaderComponent,
       FooterComponent,
@@ -24,6 +27,9 @@ import { SecondComponent } from './second/second.component';
       ChildrenComponent,
       FirstComponent,
       SecondComponent,
+      DirectiveComponent,
+      ViewchildComponent,
+      HomeComponent
    ],
   imports: [
     BrowserModule,

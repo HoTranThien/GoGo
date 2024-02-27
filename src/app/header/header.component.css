@@ -8,3 +8,14 @@ div{
     justify-content: center;
     align-items: center;
 }
+div nav a{
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    
+    margin: 30px;
+}
+div nav .active{
+    color: yellow;
+}
