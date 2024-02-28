@@ -15,9 +15,11 @@ import { SecondComponent } from './second/second.component';
 import { DirectiveComponent } from './directive/directive.component';
 import { ViewchildComponent } from './viewchild/viewchild.component';
 import { HomeComponent } from './home/home.component';
+import { HttpComponent } from './http/http.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [													
+  declarations: [														
     AppComponent,
       HeaderComponent,
       FooterComponent,
@@ -29,12 +31,14 @@ import { HomeComponent } from './home/home.component';
       SecondComponent,
       DirectiveComponent,
       ViewchildComponent,
-      HomeComponent
+      HomeComponent,
+      HttpComponent,
    ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpClientModule,
     AppRoutingModule,
-    FormsModule
   ],
   providers: [
     provideClientHydration()

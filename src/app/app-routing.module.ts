@@ -5,6 +5,8 @@ import { HomeComponent } from './home/home.component';
 import { ParentComponent } from './parent/parent.component';
 import { FirstComponent } from './first/first.component';
 import { ViewchildComponent } from './viewchild/viewchild.component';
+import { HttpComponent } from './http/http.component';
+import { NamepipePipe } from './namepipe.pipe';
 
 const routes: Routes = [
   {path: '', redirectTo: 'Home', pathMatch: 'full'},
@@ -13,11 +15,15 @@ const routes: Routes = [
   {path: 'Parent-Chilren', component: ParentComponent},
   {path: 'Service', component: FirstComponent},
   {path: 'Viewchild', component: ViewchildComponent},
+  {path: 'http', component: HttpComponent},
   {path:'**', redirectTo: 'Home', pathMatch: 'full'}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+   declarations: [
+    "NamepipePipe"
+  ]
 })
 export class AppRoutingModule { }
