@@ -1,0 +1,43 @@
+.container{
+    display: flex;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    position: relative;
+}
+.left .bottom button{
+    background-color: darkolivegreen;
+    height: 30px;
+    width: 100px;
+    font-weight: bold;
+    color: white;
+}
+.container .left .input{ 
+    font-size: large;
+    font-weight: bold;
+    min-height: 50vh;
+    border: none;
+    padding: 0 10px;
+}
+.container .left .bottom {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+.container .output{  
+    font-size: large;
+    font-weight: bold;
+    border-left: 5px dashed black;
+    width: 50%;
+    padding: 0 10px;
+}
+.container .left .bottom .number{
+    font-size: large;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 2px;
+    margin-right: 10px;
+    width: 100px;
+}

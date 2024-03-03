@@ -6,8 +6,7 @@ import { ParentComponent } from './parent/parent.component';
 import { FirstComponent } from './first/first.component';
 import { ViewchildComponent } from './viewchild/viewchild.component';
 import { HttpComponent } from './http/http.component';
-import { NamepipePipe } from './namepipe.pipe';
-
+import { RandomComponent } from './random/random.component';
 const routes: Routes = [
   {path: '', redirectTo: 'Home', pathMatch: 'full'},
   {path: 'Home', component : HomeComponent},
@@ -16,6 +15,7 @@ const routes: Routes = [
   {path: 'Service', component: FirstComponent},
   {path: 'Viewchild', component: ViewchildComponent},
   {path: 'http', component: HttpComponent},
+  {path: 'random', component:RandomComponent},
   {path:'**', redirectTo: 'Home', pathMatch: 'full'}
 ];
 
@@ -23,7 +23,6 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
    declarations: [
-    "NamepipePipe"
   ]
 })
 export class AppRoutingModule { }

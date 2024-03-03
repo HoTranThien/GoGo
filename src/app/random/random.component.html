@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="left">
+    <textarea name="text" id="" cols="30" rows="10" class="input" [(ngModel)]="input"></textarea>
+    <div class="bottom">
+      <input type="text" class="number" [(ngModel)]="num">
+      <button (click)="random(input)">Random</button>
+    </div>
+  </div>
+  <p class="output" [innerHTML]="output"></p>
+</div>

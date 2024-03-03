@@ -2,7 +2,7 @@
   <div class="user" *ngFor="let item of users">
     <div class="avatar">
       <img src="{{item.avatar_url}}" alt="">
-      <h3>JK</h3>
+      <h3>{{item.login | myname}}</h3>
     </div>
     <div class="info">
       <h2>{{item.login}}</h2>

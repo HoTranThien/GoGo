@@ -17,9 +17,12 @@ import { ViewchildComponent } from './viewchild/viewchild.component';
 import { HomeComponent } from './home/home.component';
 import { HttpComponent } from './http/http.component';
 import { HttpClientModule } from '@angular/common/http';
+import { XyzPipe } from './xyz.pipe';
+import { MynamePipe } from './myname.pipe';
+import { RandomComponent } from './random/random.component';
 
 @NgModule({
-  declarations: [														
+  declarations: [															
     AppComponent,
       HeaderComponent,
       FooterComponent,
@@ -33,6 +36,9 @@ import { HttpClientModule } from '@angular/common/http';
       ViewchildComponent,
       HomeComponent,
       HttpComponent,
+      XyzPipe,
+      MynamePipe,
+      RandomComponent
    ],
   imports: [
     BrowserModule,

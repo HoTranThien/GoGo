@@ -8,9 +8,9 @@ import { ChildrenComponent } from './children/children.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent{
+  title = "GoGo";
 
-
-
+  na = 'asafafas';
 
   // addnumber(){
   //   for(let i=1;i<=50;i++){
